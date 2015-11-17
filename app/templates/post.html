@@ -1,0 +1,13 @@
+<!-- Sub Template for posts, included by user.html -->
+
+<table class="table table-hover">
+    <tr>
+        <td width="70px"><a href="{{url_for('user', nickname = post.author.nickname)}}"><img src="{{post.author.avatar(70)}}" /></a></td>
+        <td>
+<!-- Call moment.js global variable to display time of post -->
+            <p><a href="{{url_for('user', nickname = post.author.nickname)}}">{{post.author.nickname}}</a> said {{momentjs(post.timestamp).fromNow()}}:</p>
+            <p><strong>{{post.body}}</strong></p>
+
+        </td>
+    </tr>
+</table>
