@@ -10,7 +10,7 @@ from flask.ext.login import login_user, logout_user, \
         current_user, login_required
 from app import app, db, lm, oid
 from forms import LoginForm, EditForm, PostForm, SearchForm
-from models import User, ROLE_USER, ROLE_ADMIN, Post
+from models import User, ROLE_USER, Post
 from datetime import datetime
 from emails import follower_notification
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
