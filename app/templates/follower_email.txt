@@ -6,4 +6,4 @@ Dear {{user.nickname}},
 
 Regards,
 
-The microblog admin
+The lavelle-blog admin

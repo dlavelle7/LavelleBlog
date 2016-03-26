@@ -28,10 +28,10 @@ MAIL_SERVER = 'smtp.gmail.com'
 MAIL_PORT = 465
 MAIL_USE_TLS = False
 MAIL_USE_SSL = True
-MAIL_USERNAME = 'info.microblog'
-MAIL_PASSWORD = 'microblog'
+MAIL_USERNAME = 'team.lavapp'
+MAIL_PASSWORD = 'pythonapp'
 # administrator list (for receiving emails)
-ADMINS = ['davidlavelle1@gmail.com']
+ADMINS = ['team.lavapp@gmail.com']
 
 # pagination (show posts in groups or pages - 3 posts per page).
 POSTS_PER_PAGE = 3

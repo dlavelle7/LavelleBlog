@@ -26,7 +26,7 @@ def send_email(subject, sender, recipients, text_body, html_body):
 
 def follower_notification(followed, follower):
     """# Compose notification of follower email"""
-    send_email("[microblog] %s is now following you!" % follower.nickname,
+    send_email("[lavelle-blog] %s is now following you!" % follower.nickname,
         ADMINS[0],
         [followed.email],
 	# Use render_template to compose bodies of emails
