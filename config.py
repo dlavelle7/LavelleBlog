@@ -11,11 +11,10 @@ SECRET_KEY = 'you-will-never-guess'
 
 # Define openid providers in array
 OPENID_PROVIDERS = [
-    { 'name': 'Google', 'url': 'https://www.google.com/accounts/o8/id' },
     { 'name': 'Yahoo', 'url': 'https://me.yahoo.com' },
     { 'name': 'AOL', 'url': 'http://openid.aol.com/<username>' },
     { 'name': 'Flickr', 'url': 'http://www.flickr.com/<username>' },
-    { 'name': 'MyOpenID', 'url': 'https://www.myopenid.com' }]
+    { 'name': 'StackExchange', 'url': 'https://openid.stackexchange.com' }]
 
 # Flask-SQLAlchemy extension for Database (local deployment only)   
 # Path to our database file (each DB is stored in a single file) 

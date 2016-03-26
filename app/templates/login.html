@@ -31,7 +31,7 @@ function set_openid(openid, pr)
         <div class="control-group">
 	    <!-- Render providers passed from views -->
             {% for pr in providers %}
-            <a href="javascript:set_openid('{{pr.url}}', '{{pr.name}}');"><img src="/static/img/{{pr.name.lower()}}.png" class="img-polaroid" style="margin:2px;" /></a>
+            <a href="javascript:set_openid('{{pr.url}}', '{{pr.name}}');"><img src="/static/img/{{pr.name.lower()}}.png" class="img-polaroid openid-provider" /></a>
             {% endfor %}
         </div>
         <div class="control-group{% if form.errors.openid %} error{% endif %}">

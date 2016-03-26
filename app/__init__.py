@@ -1,16 +1,13 @@
 """Init script"""
 import os
-# Import class Flask
 from flask import Flask
-# Import SQLAlchemy database
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 from flask.ext.sqlalchemy import SQLAlchemy
-# Import Flask-Login and Flask-Openid flask exts for login system
 from flask.ext.login import LoginManager
 from flask.ext.openid import OpenID
-# Import Flask-Mail to send emails from app
 from flask.ext.mail import Mail
 from config import basedir, ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
-# Import momentjs
 from momentjs import momentjs
 
 # Create the Flask application object (of class Flask)
@@ -27,6 +24,9 @@ lm.init_app(app)
 # Tells Flask-Login which function logs user in
 lm.login_view = 'login'
 oid = OpenID(app, os.path.join(basedir, 'tmp'))
+
+# Flask Admin
+admin = Admin(app, name='lavelle-blog', template_mode='bootstrap3')
 
 # Initialize a Mail object, this will be the object that connects to
 # the SMTP server and send the emails.
@@ -64,4 +64,4 @@ app.jinja_env.globals['momentjs'] = momentjs
 
 # Import views and models modules
 from app import views, models
-
+admin.add_view(ModelView(models.User, db.session))
