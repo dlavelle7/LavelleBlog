@@ -1,8 +1,9 @@
-"""Creates a thread when called from a function decorated with @async (e.g. emails.py)"""
+"""Decorator functions"""
 from threading import Thread
 
-def async(f):
+
+def async(original_function):
     def wrapper(*args, **kwargs):
-        thr = Thread(target = f, args = args, kwargs = kwargs)
+        thr = Thread(target=original_function, args=args, kwargs=kwargs)
         thr.start()
     return wrapper
