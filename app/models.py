@@ -18,8 +18,8 @@ followers = db.Table('followers',
 class User(db.Model):
     """User class"""
     
-    """Class variables created as instances of db.Column class, which take field type as an argument and optional extras (e.g. PK)
-    """
+    # Class variables created as instances of db.Column class, which take field
+    # type as an argument and optional extras (e.g. PK)
     id = db.Column(db.Integer, primary_key = True)
     nickname = db.Column(db.String(64), unique = True)
     email = db.Column(db.String(120), index = True, unique = True)
