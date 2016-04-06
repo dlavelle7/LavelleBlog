@@ -9,6 +9,7 @@ Flask-SQLAlchemy==0.16
 Flask-WTF==0.8.3
 git+git://github.com/miguelgrinberg/Flask-WhooshAlchemy
 Jinja2==2.6
+MySQL-python==1.2.4
 SQLAlchemy==0.7.9
 Tempita==0.5.1
 WTForms==1.0.3
@@ -20,6 +21,7 @@ decorator==3.4.0
 flup==1.0.3.dev-20110405
 guess-language==0.2
 gunicorn==0.17.2
+psycopg2==2.5
 python-openid==2.2.5
 pytz==2013b
 speaklater==1.3
