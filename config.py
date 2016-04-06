@@ -16,9 +16,14 @@ OPENID_PROVIDERS = [
     {'name': 'Flickr', 'url': 'http://www.flickr.com/<username>'},
     {'name': 'StackExchange', 'url': 'https://openid.stackexchange.com'}]
 
-# Flask-SQLAlchemy extension for Database (local deployment only)
-# Path to our database file (each DB is stored in a single file)
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASEDIR, 'app.db')
+if os.environ.get('DATABASE_URL') is None:
+    # Flask-SQLAlchemy extension for Database (local deployment only)
+    # Path to our database file (each DB is stored in a single file)
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASEDIR, 'app.db')
+else:
+    # Heroku set an env var named $DATABASE_URL
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+
 # Folder where SQLAlchemy-migrate data files are stored
 SQLALCHEMY_MIGRATE_REPO = os.path.join(BASEDIR, 'db_repository')
 
