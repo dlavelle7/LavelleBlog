@@ -27,7 +27,8 @@ lm.login_view = 'login'
 oid = OpenID(app, os.path.join(BASEDIR, 'tmp'))
 
 # Flask Admin
-admin = Admin(app, name='lavelle-blog', template_mode='bootstrap3')
+if os.environ.get('HEROKU') is None:
+    admin = Admin(app, name='lavelle-blog', template_mode='bootstrap3')
 
 # Initialize a Mail object, this will be the object that connects to
 # the SMTP server and send the emails.
@@ -71,4 +72,6 @@ app.jinja_env.globals['momentjs'] = momentjs
 
 # Import views and models modules
 from app import views, models
-admin.add_view(ModelView(models.User, db.session))
+if os.environ.get('HEROKU') is None:
+    admin.add_view(ModelView(models.User, db.session))
+    admin.add_view(ModelView(models.Post, db.session))
