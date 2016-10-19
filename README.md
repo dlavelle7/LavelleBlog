@@ -11,11 +11,11 @@ http://lavelle-blog.herokuapp.com/login
 * python run.py
 
 ## Screenshots ##
-# OpenID Login Page #
+### OpenID Login Page ###
 ![Alt text](./../screenshots/screenshots/login.png?raw=true "OpenID Login")
 
-# Home Page #
+### Home Page ###
 ![Alt text](./../screenshots/screenshots/home.png?raw=true "Home Page")
 
-# Profile Page #
+### Profile Page ###
 ![Alt text](./../screenshots/screenshots/profile.png?raw=true "Profile Page")
