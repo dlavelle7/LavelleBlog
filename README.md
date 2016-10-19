@@ -5,6 +5,7 @@ Blogging web app I wrote in June 2013, using the python microframework Flask.
 http://lavelle-blog.herokuapp.com/login
 
 ## Local Installation ##
+* sudo apt-get install libpq-dev python-dev libmysqlclient-dev
 * pip install -r requirements.txt
 * mkdir tmp
 * touch tmp/lavelleblog.log
